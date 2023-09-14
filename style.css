@@ -1,0 +1,11 @@
+body {
+    background-color: rgb(92, 78, 78);
+}
+
+.slides-wrapper {
+    width: 600px;
+    height: 400px;
+    overflow: hidden;
+    border: 10px solid #fff;
+    margin: 0 auto;
+}
