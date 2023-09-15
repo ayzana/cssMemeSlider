@@ -30,7 +30,7 @@ body {
     font-size: 1.2rem;
     margin-left: 10px;
 }
-.nav {
+#nav {
     display: flex;
     gap: 0.35rem;
     position: absolute;
@@ -38,19 +38,7 @@ body {
     left: 33rem;
     z-index: 10;
 }
-.btn{
-    height: 10px;
-    width: 10px;
-    border-radius: 50%;
-    cursor: pointer;
-    background-color: #ddd;
-    opacity: .5;
-    transition: all 1s ease;
- }
- .btn:hover {
-    opacity: 0.8;
-    transform: scale(1.1);
- }
+
 
  #btn1:checked ~ .slide1 {
     margin-left: 0;
@@ -68,7 +56,26 @@ body {
     margin-left: -1800px;
 }
 
+#nav label {
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+    cursor: pointer;
+   background-color: #ddd;
+    opacity: .5;  
+    transition: all 1s ease;
+}
 
+#nav label:hover {
+    opacity: 1;
+}
+#btn1:checked ~ #nav label:nth-child(1),
+#btn2:checked ~ #nav label:nth-child(2),
+#btn3:checked ~ #nav label:nth-child(3),
+#btn4:checked ~ #nav label:nth-child(4) {
+   background: transparent;
+}
 input {
    position: absolute;
    visibility: hidden;
