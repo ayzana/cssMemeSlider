@@ -16,7 +16,6 @@ body {
 }
 .slide {
     width: 25%;
-   
     transition: all 1s ease;
 }
 
@@ -28,7 +27,7 @@ body {
 .txt {
     color: #fff;
     font-size: 1.2rem;
-    margin-left: 10px;
+    margin-left: 0.6rem;
 }
 #nav {
     display: flex;
@@ -45,22 +44,22 @@ body {
 }
 
 #btn2:checked ~ .slide1 {
-    margin-left: -600px;
+    margin-left: -25%;
 }
 
 #btn3:checked ~ .slide1 {
-    margin-left: -1200px;
+    margin-left: -50%;
 }
 
 #btn4:checked ~ .slide1 {
-    margin-left: -1800px;
+    margin-left: -75%;
 }
 
 #nav label {
-    height: 8px;
-    width: 8px;
+    height: 0.5rem;
+    width: 0.5rem;
     border-radius: 50%;
-    border: 2px solid #ddd;
+    border: 0.1rem solid #ddd;
     cursor: pointer;
    background-color: #ddd;
     opacity: .5;  
@@ -77,6 +76,5 @@ body {
    background: transparent;
 }
 input {
-   position: absolute;
-   visibility: hidden;
+   display: none;
 }
