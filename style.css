@@ -1,59 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+}
 body {
     background-color: #2c2727;
 }
 
 .slides-wrapper {
-    width: 600px;
-    height: 400px;
+    width: 40rem;
     overflow: hidden;
-    margin: 0 auto;
+    margin: 1rem auto;
 }
-.slides{
+
+.slide {
     display: flex;
     width: 400%;
     height: 100%;
-    position: relative;
-}
-.slide {
-    width: 25%;
     transition: all 1s ease;
 }
 
 .slide img {
-   width: 100%;
-   height: 75%;
+   width: 25%;
+  display: block;
    border-radius: 0.5rem;
+}
+.txt-wrapper {
+    width: 30rem;
+    overflow: hidden;
+}
+.txt-slide {
+    display: flex;
+    overflow: hidden;
+    width: 400%;
+    align-items: center;
 }
 .txt {
     color: #fff;
+    width: 25%;
     font-size: 1.2rem;
     margin-left: 0.6rem;
-}
+    }
 #nav {
     display: flex;
     gap: 0.35rem;
-    position: absolute;
-    bottom: 3.8rem;
-    left: 33rem;
     z-index: 10;
 }
 
-
- #btn1:checked ~ .slide1 {
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+ #btn1:checked ~ .slide>.img1 {
     margin-left: 0;
 }
 
-#btn2:checked ~ .slide1 {
+#btn2:checked ~ .slide>.img1 {
     margin-left: -25%;
 }
 
-#btn3:checked ~ .slide1 {
+#btn3:checked ~ .slide>.img1 {
     margin-left: -50%;
 }
 
-#btn4:checked ~ .slide1 {
+#btn4:checked ~ .slide>.img1 {
     margin-left: -75%;
 }
+
+#btn1:checked ~ .footer>.txt-wrapper>.txt-slide>.txt1 {
+    margin-left: 0;
+}
+
+#btn2:checked ~ .footer>.txt-wrapper>.txt-slide>.txt1 {
+    margin-left: -25%;
+}
+
+#btn3:checked ~ .footer>.txt-wrapper>.txt-slide>.txt1 {
+    margin-left: -50%;
+}
+
+#btn4:checked ~ .footer>.txt-wrapper>.txt-slide>.txt1 {
+    margin-left: -75%;
+}
+
+
 
 #nav label {
     height: 0.5rem;
@@ -61,7 +91,7 @@ body {
     border-radius: 50%;
     border: 0.1rem solid #ddd;
     cursor: pointer;
-   background-color: #ddd;
+    background-color: #ddd;
     opacity: .5;  
     transition: all 1s ease;
 }
@@ -69,10 +99,10 @@ body {
 #nav label:hover {
     opacity: 1;
 }
-#btn1:checked ~ #nav label:nth-child(1),
-#btn2:checked ~ #nav label:nth-child(2),
-#btn3:checked ~ #nav label:nth-child(3),
-#btn4:checked ~ #nav label:nth-child(4) {
+#btn1:checked ~ .footer>#nav label:nth-child(1),
+#btn2:checked ~ .footer>#nav label:nth-child(2),
+#btn3:checked ~ .footer>#nav label:nth-child(3),
+#btn4:checked ~ .footer>#nav label:nth-child(4) {
    background: transparent;
 }
 input {
