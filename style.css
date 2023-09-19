@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #2c2727;
+}
+.container {
+    max-width: 42rem;
+    margin: 0 auto;
+}
+.slides-wrapper {
+    max-width: 40rem;
+    overflow: hidden;
+    margin: .5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;   
+}
+
+.slide {
+    display: flex;
+    width: 400%;
+    height: 100%;
+    transition: all 1s ease;
+   
+}
+
+.slide img {
+   width: 25%;
+  display: block;
+   border-radius: 0.5rem;
+   transition: all 0.5s ease;
+}
+.txt-wrapper {
+    max-width: 32rem;
+    overflow: hidden;
+}
+.txt-slide {
+    display: flex;
+    overflow: hidden;
+    width: 400%;
+    align-items: center;
+}
+.txt {
+    color: #fff;
+    width: 25%;
+    font-size: 1.2rem;
+    transition: all 0.5s ease;
+    }
+#nav {
+    display: flex;
+    gap: 0.2rem;
+    z-index: 10;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+ #btn1:checked ~ .slide>.img1 {
+    margin-left: 0;
+}
+
+#btn2:checked ~ .slide>.img1 {
+    margin-left: -25%;
+}
+
+#btn3:checked ~ .slide>.img1 {
+    margin-left: -50%;
+}
+
+#btn4:checked ~ .slide>.img1 {
+    margin-left: -75%;
+}
+
+#btn1:checked ~ .footer>.txt-wrapper>.txt-slide>.txt1 {
+    margin-left: 0;
+}
+
+#btn2:checked ~ .footer>.txt-wrapper>.txt-slide>.txt1 {
+    margin-left: -25%;
+}
+
+#btn3:checked ~ .footer>.txt-wrapper>.txt-slide>.txt1 {
+    margin-left: -50%;
+}
+
+#btn4:checked ~ .footer>.txt-wrapper>.txt-slide>.txt1 {
+    margin-left: -75%;
+}
+#nav label {
+    cursor: pointer;
+    padding: 0.2rem;
+}
+.btn {
+    height: 0.5rem;
+    width: 0.5rem;
+    border-radius: 50%;
+    border: 0.15rem solid #88909b;
+    opacity: 0.8;
+    background-color: #88909b;
+    transition: all .4s ease;
+}
+
+#nav label:hover .btn {
+    opacity: 1;
+    background-color: #fff;
+    border: 0.15rem solid #fff;
+}
+ #nav label:active .btn{
+    opacity: .2;  
+ }
+
+#btn1:checked ~ .footer>#nav label:nth-child(1) .btn,
+#btn2:checked ~ .footer>#nav label:nth-child(2) .btn,
+#btn3:checked ~ .footer>#nav label:nth-child(3) .btn,
+#btn4:checked ~ .footer>#nav label:nth-child(4) .btn {
+   background: transparent;
+   opacity: 1;
+  
+}
+input {
+   display: none;
+}
+
+@media (max-width: 700px) {
+    
+    .footer{
+        flex-direction: column-reverse;
+        gap: 1rem;       
+    }
+   .txt-slide {
+    align-items: unset;
+   }
+   .txt {
+    margin: 0;
+    font-size: 1rem;
+   }
+  
+}
